@@ -1,4 +1,4 @@
-package com.boyuanzhang.hashmap;
+package com.map;
 
 import java.util.Map;
 
