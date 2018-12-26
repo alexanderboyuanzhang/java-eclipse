@@ -1,4 +1,4 @@
-package com.myfunctions.maxmin;
+package com.maxmin;
 
 public class Minimum {
 
