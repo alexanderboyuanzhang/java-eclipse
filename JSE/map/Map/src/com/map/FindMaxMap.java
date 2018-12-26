@@ -3,7 +3,7 @@ package com.map;
 import java.util.Map;
 
 public class FindMaxMap {
-	
+
 	public static int findMaxIntegerKey(Map<Integer,Integer> map) {
 		Map.Entry<Integer, Integer> maxEntry = null;
 

@@ -9,5 +9,4 @@ public class LoopPrintList {
 			System.out.println(l.toString());
 		}
 	}
-
 }
