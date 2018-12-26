@@ -2,7 +2,7 @@
  * 
  */
 /**
- * @author Boyuan Zhang 2
+ * @author Boyuan Zhang
  *
  */
 package com;
