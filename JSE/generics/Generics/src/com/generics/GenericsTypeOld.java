@@ -1,4 +1,4 @@
-package com.boyuanzhang.generics;
+package com.generics;
 
 public class GenericsTypeOld {
 
