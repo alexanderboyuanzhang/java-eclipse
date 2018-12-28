@@ -1,4 +1,4 @@
-package com.map;
+package com.map.loop;
 
 import java.util.ArrayList;
 import java.util.HashMap;
