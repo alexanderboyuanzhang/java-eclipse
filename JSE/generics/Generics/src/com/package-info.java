@@ -5,4 +5,4 @@
  * @author Boyuan Zhang
  *
  */
-package com.generics;
+package com;
