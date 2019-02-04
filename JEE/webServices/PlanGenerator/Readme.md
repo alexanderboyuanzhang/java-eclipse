@@ -2,9 +2,19 @@ Plan Generator - Java Restful web service
 
 Java classes descriptions: 
 	
-	Package
+	Package com.plangenerator: 
+		- this package contains classes with the blueprint of input and output data;
+		- class names: 
+			- Payload.java (input data);
+			- MyResponse.java (output data).
+	Package com.plangenerator.businesslogics:
+		- this package contains a class that performs the loan plan generation;
+		- class name: Calculation.java.
+	Package com.plangenerator.services:
+		- this package contains a class that performs the RESTful web service using method POST;
+		- class name: LoanService.java.
 
-Maven web service dependencies: 
+Maven web service dependencies (pom.xml): 
 
 		<dependency>
 			<groupId>com.sun.jersey</groupId>
@@ -17,24 +27,19 @@ Maven web service dependencies:
 			<version>1.8</version>
 		</dependency>
 
-
-
 Notes for the service testing (I used Postman testing tool):
-	Endpoint: http://localhost:8080/generate-plan (POST)
-
-Headers: 
-	- Content-Type: application/json
-	- Accept: application/json
-
-Input example in Json:
-
-	{
-		"loanAmount": "5000",
-		"nominalRate": "5.0",
-		"duration": 24,
-		"startDate": "2018-01-01T00:00:01Z"
-	}
-
+	
+	Endpoint: http://localhost:8080/generate-plan (POST);
+	Headers: 
+		- Content-Type: application/json;
+		- Accept: application/json;
+	Body: 
+		{ 
+			"loanAmount": "5000", 
+			"nominalRate": "5.0", 
+			"duration": 24,
+			"startDate": "2018-01-01T00:00:01Z" 
+		}
 
 Output produced (Json):
 
