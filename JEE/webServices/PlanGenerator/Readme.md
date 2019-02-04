@@ -1,8 +1,25 @@
 Plan Generator - Java Restful web service
 
+Maven web service dependencies: 
+
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-server</artifactId>
+			<version>1.8</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-json</artifactId>
+			<version>1.8</version>
+		</dependency>
+
+
+
 Notes for the service testing (I used Postman testing tool):
 
 Endpoint: http://localhost:8080/generate-plan (POST)
+
 Headers: 
 	- Content-Type: application/json
 	- Accept: application/json
