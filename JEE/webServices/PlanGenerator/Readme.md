@@ -20,8 +20,7 @@ Maven web service dependencies:
 
 
 Notes for the service testing (I used Postman testing tool):
-
-Endpoint: http://localhost:8080/generate-plan (POST)
+	Endpoint: http://localhost:8080/generate-plan (POST)
 
 Headers: 
 	- Content-Type: application/json
