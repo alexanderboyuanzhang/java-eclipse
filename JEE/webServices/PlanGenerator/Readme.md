@@ -9,6 +9,7 @@ Plan Generator - Java Restful web service
 
 
 Input example in Json:
+
 { 
 	"loanAmount": "5000", 
 	"nominalRate": "5.0", 
