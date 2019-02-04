@@ -1,6 +1,8 @@
 Plan Generator - Java Restful web service
 
-
+Java classes descriptions: 
+	
+	Package
 
 Maven web service dependencies: 
 
