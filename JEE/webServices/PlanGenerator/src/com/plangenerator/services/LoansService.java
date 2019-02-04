@@ -25,5 +25,4 @@ public class LoansService {
 		String result = calculations.toString();
 		return Response.status(201).entity(result).build();
 	}
-
 }
