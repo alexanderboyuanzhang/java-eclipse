@@ -1,5 +1,19 @@
 Plan Generator - Java Restful web service
 
+Notes for the service testing (I used Postman testing tool):
+	
+	Endpoint: http://localhost:8080/generate-plan (POST);
+	Headers: 
+		- Content-Type: application/json;
+		- Accept: application/json;
+	Body: 
+		{ 
+			"loanAmount": "5000", 
+			"nominalRate": "5.0", 
+			"duration": 24,
+			"startDate": "2018-01-01T00:00:01Z" 
+		}
+
 Java classes descriptions: 
 	
 	Package com.plangenerator: 
@@ -14,6 +28,26 @@ Java classes descriptions:
 		- this package contains a class that performs the RESTful web service using method POST;
 		- class name: LoanService.java.
 
+Web descriptor configuration (web.xml): 
+
+	<servlet>
+		<servlet-name>jersey-serlvet</servlet-name>
+		<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+		<init-param>
+			<param-name>com.sun.jersey.config.property.packages</param-name>
+			<param-value>com.plangenerator.services</param-value>
+		</init-param>
+		<init-param>
+			<param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>jersey-serlvet</servlet-name>
+		<url-pattern>/*</url-pattern>
+	</servlet-mapping>
+
 Maven web service dependencies (pom.xml): 
 
 		<dependency>
@@ -26,20 +60,6 @@ Maven web service dependencies (pom.xml):
 			<artifactId>jersey-json</artifactId>
 			<version>1.8</version>
 		</dependency>
-
-Notes for the service testing (I used Postman testing tool):
-	
-	Endpoint: http://localhost:8080/generate-plan (POST);
-	Headers: 
-		- Content-Type: application/json;
-		- Accept: application/json;
-	Body: 
-		{ 
-			"loanAmount": "5000", 
-			"nominalRate": "5.0", 
-			"duration": 24,
-			"startDate": "2018-01-01T00:00:01Z" 
-		}
 
 Output produced (Json):
 
