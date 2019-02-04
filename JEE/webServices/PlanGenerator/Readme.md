@@ -1,5 +1,7 @@
 Plan Generator - Java Restful web service
 
+Server: Tomcat v9.0 Server at localhost.
+
 Notes for the service testing (I used Postman testing tool):
 	
 	Endpoint: http://localhost:8080/generate-plan (POST);
