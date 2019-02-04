@@ -38,11 +38,4 @@ public class Payload {
 	public void setStartDate(String startDate) {
 		this.startDate = startDate;
 	}
-
-	@Override
-	public String toString() {
-		return "{ \"loanAmount\": \"" + loanAmount + "\", \"nominalRate\": \"" + nominalRate + "\", \"duration\": \""
-				+ duration + "\", \"startDate\": \"" + startDate + "\" }";
-	}
-
 }

@@ -24,7 +24,6 @@ public class LoansService {
 		//"Payload saved" 
 		String result = calculations.toString();
 		return Response.status(201).entity(result).build();
-
 	}
 
 }

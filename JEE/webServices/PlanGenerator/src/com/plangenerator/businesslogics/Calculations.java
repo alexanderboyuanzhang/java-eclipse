@@ -13,18 +13,22 @@ import com.plangenerator.Payload;
 
 public class Calculations {
 
+	// instance variables
 	private Payload payload;
 	private String outputString = "";
 	MyResponse myResponse = new MyResponse();
 
+	// empty constructor
 	public Calculations() {
 
 	}
 
+	// the constructor used to retrieve incoming data
 	public Calculations(Payload payload) {
 		this.payload = payload;
 	}
 
+	// this is the method used by LoansService.java
 	public void calculatePlan() throws ParseException {
 		while (payload.getDuration() > 0) {
 			
@@ -42,7 +46,7 @@ public class Calculations {
 			if (remainingOutstandingPrincipal < 0) {
 				annuity = format2Places(annuity + remainingOutstandingPrincipal);
 				principal = format2Places(principal + remainingOutstandingPrincipal);
-				remainingOutstandingPrincipal =format1Place(0);
+				remainingOutstandingPrincipal =0;
 			}
 
 			myResponse.setBorrowerPaymentAmount(format2Places(annuity));
@@ -99,15 +103,13 @@ public class Calculations {
 		return format2Places(interest);
 	}
 
+	// the method used to 
 	private double format2Places(double d) {
 		DecimalFormat f2p = new DecimalFormat("0.00");
 		return Double.valueOf(f2p.format(d));
 	}
-	private double format1Place(double d) {
-		DecimalFormat f2p = new DecimalFormat("0");
-		return Double.valueOf(f2p.format(d));
-	}
 	
+	// this toString method performs the Service output
 	@Override
 	public String toString() {
 		return "{ [ " + outputString + " ] }";
