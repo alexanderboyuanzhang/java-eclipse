@@ -1,5 +1,7 @@
 Plan Generator - Java Restful web service
 
+
+
 Maven web service dependencies: 
 
 		<dependency>
@@ -22,13 +24,6 @@ Endpoint: http://localhost:8080/generate-plan (POST)
 Headers: 
 	- Content-Type: application/json
 	- Accept: application/json
-
-
-
-
-
-
-
 
 Input example in Json:
 
