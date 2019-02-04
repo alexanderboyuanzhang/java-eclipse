@@ -34,7 +34,7 @@ public class Calculations {
 			// please don't switch orders
 			String date = payload.getStartDate();
 			double interest = calculateInterest(payload.getNominalRate(), payload.getLoanAmount());
-			double annuity = myResponse.getANNUITY();
+			double annuity = myResponse.getANNUITY(); // <-------------------------------------------
 			double principal = calculatePrincipal(interest, annuity);
 			double initialLoanAmount = payload.getLoanAmount();
 			double remainingOutstandingPrincipal = initialLoanAmount - principal;
@@ -45,7 +45,7 @@ public class Calculations {
 				remainingOutstandingPrincipal =format1Place(0);
 			}
 
-			myResponse.setBorrowerPaymentAmount(annuity);
+			myResponse.setBorrowerPaymentAmount(format2Places(annuity));
 			myResponse.setInitialOutstandingPrincipal(format2Places(initialLoanAmount));
 			myResponse.setDate(date);
 			myResponse.setInterest(interest);
