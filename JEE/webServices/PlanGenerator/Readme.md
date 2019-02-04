@@ -1,7 +1,6 @@
 Plan Generator - Java Restful web service
 
 Maven web service dependencies: 
-
 		<dependency>
 			<groupId>com.sun.jersey</groupId>
 			<artifactId>jersey-server</artifactId>
