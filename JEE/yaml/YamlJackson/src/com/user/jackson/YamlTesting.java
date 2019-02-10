@@ -16,7 +16,6 @@ public class YamlTesting {
 			User user = mapper.readValue(new File("tmp/user.yaml"), User.class);
 			System.out.println(ReflectionToStringBuilder.toString(user, ToStringStyle.MULTI_LINE_STYLE));
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

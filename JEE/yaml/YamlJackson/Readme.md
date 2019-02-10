@@ -109,6 +109,7 @@
 	
 	YamlFactory has taken care of mapping address into MAP and roles into a String array. We can also create an Address.java bean class to hold address data and use it instead of MAP in the User bean. YamlFactory will take care of creating the address object and populate it with values from YAML.
 	
-### source: https://dzone.com/articles/read-yaml-in-java-with-jackson
+#### source: 
+https://dzone.com/articles/read-yaml-in-java-with-jackson
 
 
