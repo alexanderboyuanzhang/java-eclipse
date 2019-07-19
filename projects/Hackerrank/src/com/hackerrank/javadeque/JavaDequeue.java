@@ -1,4 +1,4 @@
-package com.hackerrank.boyuanzhang;
+package com.hackerrank.javadeque;
 
 import java.util.*;
 

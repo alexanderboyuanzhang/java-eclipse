@@ -1,4 +1,4 @@
-package com.hackerrank.boyuanzhang;
+package com.hackerrank.javastringtokens;
 
 import java.util.ArrayList;
 import java.util.Arrays;
